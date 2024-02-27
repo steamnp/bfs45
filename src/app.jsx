@@ -1,12 +1,19 @@
 // Separation of Concern
-
-import Contact from './contact'
+import './styles/app.css'
 
 function App() {
   return (
-    <div>
-      <Contact />
-    </div>
+    <>
+      <header className="container"> 1 </header>
+
+      <main>
+      <div> Hello React</div>
+      </main>
+
+      <footer className='footer'>
+        <div className='inner-footer'>footer</div>
+      </footer>
+    </> // react fragment -> outside fragment, outside element
   )
 }
 
