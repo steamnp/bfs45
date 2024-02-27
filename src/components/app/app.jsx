@@ -1,5 +1,6 @@
 // Relative import
-import '../../styles/components/app.css'
+import style from '../../styles/components/app.module.css'
+import Contact from '../contact/contact'
 {
   /* <div>Hello React</div> -> JSX */
 }
@@ -7,7 +8,9 @@ import '../../styles/components/app.css'
 function App() {
   return (
     <>
-      <header className="container">Header</header>
+      <header className={style.container}>Header</header>
+
+      <Contact />
 
       <main>
         <section>Section 1</section>
