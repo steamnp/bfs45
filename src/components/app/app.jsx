@@ -1,10 +1,11 @@
 // Separation of Concern
-import './styles/app.css'
+import '../../styles/app.css'
 
 function App() {
   return (
     <>
       <header className="container"> 1 </header>
+      <Contact/>
 
       <main>
       <div> Hello React</div>
