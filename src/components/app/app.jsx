@@ -1,22 +1,32 @@
-// Separation of Concern
-import '../../styles/app.css'
+// Relative import
+import style from '../../styles/components/app.module.css'
+import Contact from '../contact/contact'
+import Dashboard from '../dashboard/dashboard'
+{
+  /* <div>Hello React</div> -> JSX */
+}
 
 function App() {
   return (
     <>
-      <header className="container"> 1 </header>
-      <Contact/>
+      <header className={style.container}>Header</header>
+
+      <Contact />
 
       <main>
-      <div> Hello React</div>
+        <section>Section 1</section>
+        <section>Section 2</section>
       </main>
 
-      <footer className='footer'>
-        <div className='inner-footer'>footer</div>
+      <Dashboard />
+
+      <footer className="footer">
+        <div className="innerFooter">footer</div>
       </footer>
-    </> // react fragment -> outside fragment, outside element
+    </>
   )
 }
 
-// default export
+// <></> -> React Fragment
+
 export default App

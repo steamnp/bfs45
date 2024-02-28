@@ -1,0 +1,16 @@
+/* CSS Rule */
+
+.container {
+  background-color: red;
+  color: white;
+}
+
+.footer {
+  background-color: brown;
+  color: white;
+}
+
+.innerFooter {
+  color: black;
+  background-color: red;
+}

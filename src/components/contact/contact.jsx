@@ -1,7 +1,5 @@
-function Contact(){
-    return (
-        <>
-            This is a contact page.
-        </>
-    )
+function Contact() {
+  return <div className="container">I am contact page!</div>
 }
+
+export default Contact
