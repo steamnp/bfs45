@@ -1,6 +1,7 @@
 // Relative import
 import style from '../../styles/components/app.module.css'
 import Contact from '../contact/contact'
+import Dashboard from '../dashboard/dashboard'
 {
   /* <div>Hello React</div> -> JSX */
 }
@@ -16,6 +17,8 @@ function App() {
         <section>Section 1</section>
         <section>Section 2</section>
       </main>
+
+      <Dashboard />
 
       <footer className="footer">
         <div className="innerFooter">footer</div>
