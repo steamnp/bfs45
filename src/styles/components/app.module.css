@@ -1,16 +1,21 @@
 /* CSS Rule */
 
-.container {
-  background-color: red;
-  color: white;
+body {
+  margin: 5px;
 }
 
-.footer {
-  background-color: brown;
-  color: white;
+.outerDiv {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
 }
 
-.innerFooter {
-  color: black;
-  background-color: red;
+.notice {
+  color: red;
+}
+
+.headerDiv {
+  margin-bottom: 20px;
 }

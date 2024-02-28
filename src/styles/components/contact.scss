@@ -1,0 +1,13 @@
+$primary-color: #964b00;
+$secondary-color: #808080;
+
+.headerDiv {
+  background-color: $primary-color;
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .headerDiv {
+    background-color: $secondary-color;
+  }
+}

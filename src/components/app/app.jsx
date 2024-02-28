@@ -1,6 +1,6 @@
 // Relative import
-import style from '../../styles/components/app.module.css'
-import Contact from '../contact/contact'
+import style from "../../styles/components/app.module.css";
+import Contact from "../contact/contact";
 {
   /* <div>Hello React</div> -> JSX */
 }
@@ -8,22 +8,21 @@ import Contact from '../contact/contact'
 function App() {
   return (
     <>
-      <header className={style.container}>Header</header>
-
-      <Contact />
-
-      <main>
-        <section>Section 1</section>
-        <section>Section 2</section>
-      </main>
-
-      <footer className="footer">
-        <div className="innerFooter">footer</div>
-      </footer>
+      <div className={style.outerDiv}>
+        <div className={style.headerDiv}>
+          <h1>This is a React Application</h1>
+          <h3 className={style.notice}>
+            To test the media query, change the screen's width.
+          </h3>
+        </div>
+        <div className={style.contactDiv}>
+          <Contact />
+        </div>
+      </div>
     </>
-  )
+  );
 }
 
 // <></> -> React Fragment
 
-export default App
+export default App;
