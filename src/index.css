@@ -1,3 +1,5 @@
+/* CSS reset -> removing default margin from the browser */
+
 * {
     margin: 0;
 }
