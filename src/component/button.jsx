@@ -1,13 +1,16 @@
-function Button({ buttonText = 'Button', bgColor = 'red' }) {
-  const btnStyle = { backgroundColor: bgColor, border: 'none', color: 'white' }
-  // number (NaN)
-  // string
-  // array
-  // object (null)
-  // undefined
-  // boolean
+import './button.css'
 
-  return <button style={btnStyle}>{buttonText}</button>
+function Button({ type, children = 'Button' }) {
+  return <button className={`button ${type ? `button--${type}` : ''}`}>{children}</button>
 }
 
 export default Button
+
+const myName = 'Bikash'
+
+// `` -> backtick
+
+// intro
+const intro = `hello ${myName}`
+
+// `hello ${myName}` -> Template Literal

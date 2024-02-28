@@ -4,9 +4,9 @@ import Store from './store'
 function Home() {
   return (
     <div>
-      <Button buttonText="Home Button" bgColor="green" />
-      <Button buttonText="New Button" bgColor="purple" />
-      <Button bgColor="navy" />
+      <Button>Home Button</Button>
+      <Button type="view-all">New Button</Button>
+      <Button type="back" />
       <Store />
     </div>
   )
@@ -17,3 +17,7 @@ function Home() {
 //<Button buttonText={} /> -> buttonText -> prop
 
 export default Home
+
+{
+  /* <button>Home button</button> */
+}
