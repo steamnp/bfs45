@@ -14,7 +14,7 @@
   border: none;
   padding: 5px 5px;
   border: none;
-  font-family: 'Inter', Helvetica, sans-serif;
+  font-family: "Inter", Helvetica, sans-serif;
   font-size: 12px;
   font-weight: 600;
   letter-spacing: -0.8px;
@@ -45,17 +45,45 @@
 }
 
 /* Assignment */
-/* .button--view--all {
+.button--view--all,
+.button--view--all:focus {
+  background-color: #1475ba;
+  color: white;
 }
 
-.button--remove {
+.button--view--all:hover {
+  background-color: #1475babb;
 }
 
-.button--back {
+.button--remove,
+.button--remove:focus {
+  background-color: #ba1414;
+  color: white;
 }
 
-.button--get-started {
-}  */
+.button--remove:hover {
+  background-color: #ba141497;
+}
+
+.button--back,
+.button--back:focus {
+  background-color: #323232;
+  color: white;
+}
+
+.button--back:hover {
+  background-color: #32323292;
+}
+
+.button--get-started,
+.button--get-started:focus {
+  background-color: #d5d814;
+  color: black;
+}
+
+.button--get-started:hover {
+  background-color: #d5d81497;
+}
 
 /* 0 - 480px */
 /* small screen -> mobile devices */
