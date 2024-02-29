@@ -1,31 +1,41 @@
+/* CSS Flex Layout mode */
 .button {
-  background-color: green;
+  cursor: pointer;
+  display: block;
+  /* justify-content: center;
+  align-items: center; */
+  width: 20px;
+  height: 48px;
+  background-color: rgba(216, 91, 83, 0.7);
+  /* border: none; */
+  padding: 5px 5px;
+  border: 1px solid orange;
+}
+/* 42x60 */
+
+/* .button--view {
+}
+
+.button--view--all {
 }
 
 .button--remove {
-  background-color: red;
-}
-
-.button--view-all {
-  background-color: rgb(216, 91, 83, 0.5);
-}
-
-.button--view {
-  background-color: purple;
 }
 
 .button--back {
-  background-color: yellow;
 }
 
-@media only screen and (max-width: 400px) {
-  .button {
-    background-color: blue;
-  }
-}
+.button--get-started {
+} */
 
-@media only screen and (min-width: 401px) and (max-width: 600px) {
-  .button {
-    background-color: darkorange;
-  }
-}
+/* 1081-up */
+/* @media only screen and() {
+} */
+
+/* 501-1080 */
+/* @media only screen and() {
+} */
+
+/* 0 - 500px */
+/* @media only screen and() {
+} */

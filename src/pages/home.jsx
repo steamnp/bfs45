@@ -4,10 +4,10 @@ import Store from './store'
 function Home() {
   return (
     <div>
-      <Button>Home Button</Button>
-      <Button type="view-all">New Button</Button>
-      <Button type="back" />
-      <Store />
+      <Button>12345</Button>
+      {/* <Button type="view-all">New Button</Button>
+      <Button type="back" /> */}
+      {/* <Store /> */}
     </div>
   )
 }
