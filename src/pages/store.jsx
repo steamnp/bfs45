@@ -1,7 +1,7 @@
-import Button from '../component/button'
+import Button from "../component/button";
 
 function Store() {
-  return <Button type="view">Store Button</Button>
+  return <Button type="view">Store Button</Button>;
 }
 
-export default Store
+export default Store;
