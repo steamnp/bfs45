@@ -1,5 +1,11 @@
 import './button.css'
 
+// view
+// view--all
+// back
+// remove
+// get-started
+
 function Button({ type, children = 'Button' }) {
   return <button className={`button ${type ? `button--${type}` : ''}`}>{children}</button>
 }
