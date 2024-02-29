@@ -4,7 +4,8 @@ import Store from './store'
 function Home() {
   return (
     <div>
-      <Button>12345</Button>
+      <Button>123456</Button>
+      <Button type="view">123456</Button>
       {/* <Button type="view-all">New Button</Button>
       <Button type="back" /> */}
       {/* <Store /> */}
