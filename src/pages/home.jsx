@@ -4,6 +4,9 @@ import Store from './store'
 function Home() {
   return (
     <div>
+      <Button>
+      <div>1</div>
+      </Button>
       <Button>Home Button</Button>
       <Button type="view-all">New Button</Button>
       <Button type="back" />

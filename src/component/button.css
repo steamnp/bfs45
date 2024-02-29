@@ -1,4 +1,4 @@
-.button {
+/* .button {
   background-color: green;
 }
 
@@ -28,4 +28,35 @@
   .button {
     background-color: darkorange;
   }
+} */
+
+.button {
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 20px;
+  height: 48px;
+  background-color: rgb(500, 200, 800);
+  margin: 10px;
+  border: 1px solid;
+
 }
+
+/* .button--view {
+
+}
+
+.button--view--all {
+  
+}
+
+.button--remove {
+  
+}
+.button--back {
+  
+}
+.button--get--started {
+  
+} */
