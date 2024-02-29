@@ -1,0 +1,27 @@
+.button {
+  background-color: rgb(180, 123, 100, 0.5);
+}
+
+.button--remove {
+  background-color: red;
+}
+
+.button--view-all {
+  background-color: pink;
+}
+
+.button--view {
+  background-color: greenyellow;
+}
+
+@media only screen and (max-width: 600px) {
+  .button {
+    background-color: orangered;
+  }
+}
+
+/* @media only screen and (min-width: 400px) and(max-width: 600px) {
+  .button {
+    background-color: darkcyan;
+  }
+} */
