@@ -1,3 +1,5 @@
+import './App.scss';
+
 // Separation of Concern
 
 import Contact from './contact'

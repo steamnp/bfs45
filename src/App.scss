@@ -1,0 +1,22 @@
+
+.container {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+.container {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+
+  @media (min-width: 768px) {
+    width: 750px;
+  }
+}
