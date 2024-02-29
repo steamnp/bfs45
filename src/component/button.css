@@ -1,23 +1,22 @@
-/* .button {
-  background-color: green;
+/* CSS Flex Layout mode */
+.button {
+  cursor: pointer;
+  display: block;
+  /* justify-content: center;
+  align-items: center; */
+  width: 20px;
+  height: 48px;
+  background-color: rgba(216, 91, 83, 0.7);
+  /* border: none; */
+  padding: 5px 5px;
+  border: 1px solid orange;
 }
-
 /* 42x60 */
 
-.button--view {
-  background-color: #d85b53;
-  width: 170px;
-  height: 40px;
-  margin-right: 40px;
+/* .button--view {
 }
 
-.button--view:hover {
-  width: 175px;
-  box-shadow: 6px 0px 0px rgb(255, 255, 255, 0.2);
-}
-
-/* Assignment */
-/* .button--view--all {
+.button--view--all {
 }
 
 .button--remove {
@@ -27,49 +26,16 @@
 }
 
 .button--get-started {
-}  */
-
-/* 0 - 480px */
-/* small screen -> mobile devices */
-@media only screen and (max-width: 480px) {
-  .button--view {
-    background-color: navy;
-  }
-}
-
-@media only screen and (min-width: 401px) and (max-width: 600px) {
-  .button {
-    background-color: darkorange;
-  }
 } */
 
-.button {
-  cursor: pointer;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  min-width: 20px;
-  height: 48px;
-  background-color: rgb(500, 200, 800);
-  margin: 10px;
-  border: 1px solid;
+/* 1081-up */
+/* @media only screen and() {
+} */
 
-}
+/* 501-1080 */
+/* @media only screen and() {
+} */
 
-/* .button--view {
-
-}
-
-.button--view--all {
-  
-}
-
-.button--remove {
-  
-}
-.button--back {
-  
-}
-.button--get--started {
-  
+/* 0 - 500px */
+/* @media only screen and() {
 } */
