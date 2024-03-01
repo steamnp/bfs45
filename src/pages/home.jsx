@@ -4,10 +4,12 @@ import Store from './store'
 function Home() {
   return (
     <div className='container'>
-      <Button>12345</Button>
-      <Button type="view-all">New Button</Button>
-      <Button type="back" />
-       {/* <Store /> */}
+      <Button>Home Button</Button>
+      <Button type="view">View Button</Button>
+      <Button type="back"> Back Button </Button>
+      <Button type="remove">Remove Button</Button>
+      <Button type="get-started"> Get Started</Button>
+      <Store/>
     </div>
   )
 }

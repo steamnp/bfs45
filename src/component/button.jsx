@@ -12,11 +12,11 @@ function Button({ type, children = 'Button' }) {
 
 export default Button
 
-const myName = 'Bikash'
+// const myName = 'Bikash'
 
 // `` -> backtick
 
 // intro
-const intro = `hello ${myName}`
+// const intro = `hello ${myName}`
 
 // `hello ${myName}` -> Template Literal
