@@ -5,9 +5,12 @@ function Home() {
   return (
     <div>
       <Button>Home Button</Button>
-      <Button type="view-all">New Button</Button>
-      <Button type="back" />
-      <Store />
+      <Button type="view">View Button</Button>
+      <Button type="back"> Back Button </Button>
+      <Button type="remove">Remove Button</Button>
+      <Button type="get-started"> Get Started</Button>
+      <Button type="uppercase">UpperCase</Button>
+      <Store/>
     </div>
   )
 }

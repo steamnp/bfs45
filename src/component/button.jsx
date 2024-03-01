@@ -1,6 +1,6 @@
 import './button.css'
 
-function Button({ type, children = 'Button' }) {
+function Button({ type, children = 'button' }) {
   return <button className={`button ${type ? `button--${type}` : ''}`}>{children}</button>
 }
 
