@@ -1,5 +1,8 @@
-:root{
+.container{
   align-items: center;
+  color: red;
+  background-color: #007bff;
+
 }
 
 .button {
@@ -26,6 +29,7 @@
   transition: all 0.3s;
   border-radius: 5px;
   color: rgb(43, 33, 20);
+  display: flex;
 }
 .button:hover{
   background-color: rgb(207, 145, 124);
@@ -98,5 +102,11 @@
   }
 }
 @media only screen and (min-width: 700px){
+  .button--back{
+    background-color: crimson;
+    height: 50px;
+    width: 500px;
+    will-change:contents
+  }
   
 }

@@ -1,10 +1,15 @@
-import './button.css'
+import styles from './button.module.css'; // Import CSS module
 
 function Button({ type, children = 'button' }) {
-  return <button className={`button ${type ? `button--${type}` : ''}`}>{children}</button>
+  return (
+
+    <button className={`${styles.button} ${type ? styles[`button--${type}`] : ''}`}>{children}</button>
+       
+  );
+
 }
 
-export default Button
+export default Button;
 
 const myName = 'Bikash'
 

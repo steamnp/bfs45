@@ -1,7 +1,10 @@
 import Button from '../component/button'
 import Store from './store'
+import Count from '../component/count'
+
 
 function Home() {
+  
   return (
     <div>
       <Button>Home Button</Button>
@@ -10,6 +13,7 @@ function Home() {
       <Button type="remove">Remove Button</Button>
       <Button type="get-started"> Get Started</Button>
       <Button type="uppercase">UpperCase</Button>
+      <Count/>
       <Store/>
     </div>
   )
