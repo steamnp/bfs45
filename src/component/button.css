@@ -1,57 +1,102 @@
+/* CSS -> CSS module -> SASS with CSS module ->Styled Components -> CSS UI Framework (Bootstrap, Tailwind, MUI) */
+
 /* CSS Flex Layout mode */
+/* TODO: box-sizing with button not working */
+.container{
+  display: flex;
+  justify-content: space-around;
+}
 .button {
+  margin-top: 20px;
   cursor: pointer;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
+  min-width: 20px;
   height: 48px;
   background-color: rgba(216, 91, 83, 0.7);
   border: none;
   padding: 5px 5px;
-  border: 1px solid orange;
+  border: none;
+  font-family: 'Inter', Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: -0.8px;
+  transition: all 0.3s;
+  border-radius: 5px;
+  color: white;
   user-select: none;
+  -webkit-user-select: none;
 }
+
 .button:hover,
 .button:focus {
   background-color: green;
 }
+
 /* 42x60 */
 
- .button--view {
-  background-color: orange;
+.button--view {
+  background-color: #d85b53;
   width: 170px;
   height: 40px;
-}
-.button--view:hover {
-  width: 175px;
-  box-shadow: 6px 0px rgba(216, 91, 83, 0.7);
+  margin-right: 40px;
 }
 
+.button--view:hover {
+  width: 175px;
+  box-shadow: 6px 0px 0px rgb(255, 255, 255, 0.2);
+}
+
+/* Assignment */
 .button--view--all {
+  background-color: aqua;
 }
 
 .button--remove {
+  background-color: red;
 }
 
 .button--back {
+  background-color: black;
 }
 
 .button--get-started {
+  background-color: yellowgreen;
 } 
 
-/* 1081-up */
-/* @media only screen and() {
-} */
+/* 0 - 480px */
+/* small screen -> mobile devices */
+@media only screen and (max-width: 480px) {
+  .button--view {
+    background-color: navy;
+  }
+}
 
-/* 501-1080 */
-/* @media only screen and() {
-} */
-
-/* 0 - 500px */
-@media only screen and(max-width: 500px) {
-  .button--view{
-    background-color: purple;
-    
+/* medium screen -> tablets */
+/* 481-768 */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .button--view {
+    background-color: yellowgreen;
+    width: 150px;
+    height: 36px;
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .button {
+    margin: 10px; /* Add some margin around each button */
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .button {
+    display: block; /* Change button layout to block */
+    text-align: center; /* Center-align button content */
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .button {
+    display: block; /* Change button layout to block */
+    text-align: center; /* Center-align button content */
   }
 }

@@ -3,10 +3,10 @@ import Store from './store'
 
 function Home() {
   return (
-    <div>
+    <div className='container'>
       <Button>12345</Button>
       <Button type="view-all">New Button</Button>
-      {/* <Button type="back" /> */}
+      <Button type="back" />
        {/* <Store /> */}
     </div>
   )
