@@ -1,19 +1,31 @@
 /* CSS Flex Layout mode */
 .button {
   cursor: pointer;
-  display: block;
-  /* justify-content: center;
-  align-items: center; */
-  width: 20px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
   height: 48px;
   background-color: rgba(216, 91, 83, 0.7);
-  /* border: none; */
+  border: none;
   padding: 5px 5px;
   border: 1px solid orange;
+  user-select: none;
+}
+.button:hover,
+.button:focus {
+  background-color: green;
 }
 /* 42x60 */
 
-/* .button--view {
+ .button--view {
+  background-color: orange;
+  width: 170px;
+  height: 40px;
+}
+.button--view:hover {
+  width: 175px;
+  box-shadow: 6px 0px rgba(216, 91, 83, 0.7);
 }
 
 .button--view--all {
@@ -26,7 +38,7 @@
 }
 
 .button--get-started {
-} */
+} 
 
 /* 1081-up */
 /* @media only screen and() {
@@ -37,5 +49,9 @@
 } */
 
 /* 0 - 500px */
-/* @media only screen and() {
-} */
+@media only screen and(max-width: 500px) {
+  .button--view{
+    background-color: purple;
+    
+  }
+}
