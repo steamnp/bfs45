@@ -1,24 +1,16 @@
-import Button from '../component/button'
-import Store from './store'
+import Button from "../component/button";
 
 function Home() {
   return (
     <div>
-      <Button>123456</Button>
-      <Button type="view">123456</Button>
-      {/* <Button type="view-all">New Button</Button>
-      <Button type="back" /> */}
-      {/* <Store /> */}
+      <Button>1</Button>
+      <Button type="view">2</Button>
+      <Button type="view--all">3</Button>
+      <Button type="remove">4</Button>
+      <Button type="back">5</Button>
+      <Button type="get-started">6</Button>
     </div>
-  )
+  );
 }
 
-// <div className="sth" id="one"></div> -> className,id are attribute
-
-//<Button buttonText={} /> -> buttonText -> prop
-
-export default Home
-
-{
-  /* <button>Home button</button> */
-}
+export default Home;
