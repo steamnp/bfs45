@@ -8,13 +8,15 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  min-width: 20px;
-  height: 48px;
+  /* min-width: 20px;
+  height: 48px; */
+  width: 170px;
+  height: 40px;
   background-color: rgba(216, 91, 83, 0.7);
   border: none;
   padding: 5px 5px;
   border: none;
-  font-family: 'Inter', Helvetica, sans-serif;
+  font-family: "Inter", Helvetica, sans-serif;
   font-size: 12px;
   font-weight: 600;
   letter-spacing: -0.8px;
@@ -23,6 +25,7 @@
   color: white;
   user-select: none;
   -webkit-user-select: none;
+  margin-right: 40px;
 }
 
 .button:hover,
@@ -34,9 +37,7 @@
 
 .button--view {
   background-color: #d85b53;
-  width: 170px;
-  height: 40px;
-  margin-right: 40px;
+  /* margin-right: 40px; */
 }
 
 .button--view:hover {
@@ -45,17 +46,21 @@
 }
 
 /* Assignment */
-/* .button--view--all {
+.button--view--all {
+  background-color: #0bd629;
 }
 
 .button--remove {
+  background-color: #f71919;
 }
 
 .button--back {
+  background-color: #1f7fed;
 }
 
 .button--get-started {
-}  */
+  background-color: #f731bc;
+}
 
 /* 0 - 480px */
 /* small screen -> mobile devices */

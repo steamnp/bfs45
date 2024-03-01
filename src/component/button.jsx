@@ -1,4 +1,4 @@
-import './button.css'
+import style from "./button.module.css";
 
 // view
 // view--all
@@ -6,17 +6,23 @@ import './button.css'
 // remove
 // get-started
 
-function Button({ type, children = 'Button' }) {
-  return <button className={`button ${type ? `button--${type}` : ''}`}>{children}</button>
+function Button({ type, children = "Button" }) {
+  return (
+    <button
+      className={`${style.button} ${type ? style[`button--${type}`] : ""}`}
+    >
+      {children}
+    </button>
+  );
 }
 
-export default Button
+export default Button;
 
-const myName = 'Bikash'
+const myName = "Bikash";
 
 // `` -> backtick
 
 // intro
-const intro = `hello ${myName}`
+const intro = `hello ${myName}`;
 
 // `hello ${myName}` -> Template Literal
