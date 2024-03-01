@@ -5,9 +5,9 @@ function Home() {
   return (
     <div>
       <Button>12345</Button>
-      {/* <Button type="view-all">New Button</Button>
-      <Button type="back" /> */}
-      {/* <Store /> */}
+      <Button type="view-all">New Button</Button>
+      {/* <Button type="back" /> */}
+       {/* <Store /> */}
     </div>
   )
 }
