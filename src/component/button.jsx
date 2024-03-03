@@ -12,7 +12,7 @@ function Button({ type, children = 'Button' }) {
 
 export default Button
 
-const myName = 'Bikash'
+const myName = 'Nirjala'
 
 // `` -> backtick
 

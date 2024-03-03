@@ -45,17 +45,60 @@
 }
 
 /* Assignment */
-/* .button--view--all {
+/* button.css */
+.button--view--all {
+  background-color: #4a90e2;
+  width: 160px;
+  margin-right: 20px;
 }
 
 .button--remove {
+  background-color: #e74c3c;
 }
 
 .button--back {
+  background-color: #95a5a6;
 }
 
 .button--get-started {
-}  */
+  background-color: #2ecc71;
+  width: 200px;
+  height: 50px;
+  font-size: 14px;
+}
+
+.button--view--all:hover,
+.button--remove:hover,
+.button--back:hover,
+.button--get-started:hover {
+  filter: brightness(85%);
+}
+
+@media only screen and (max-width: 480px) {
+  .button--view,
+  .button--view--all,
+  .button--remove,
+  .button--back,
+  .button--get-started {
+    width: 100%;
+    margin-right: 0;
+    justify-content: center;
+  }
+
+  .button--get-started {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .button--view,
+  .button--view--all,
+  .button--remove,
+  .button--back,
+  .button--get-started {
+    padding: 10px 15px;
+  }
+}
 
 /* 0 - 480px */
 /* small screen -> mobile devices */
