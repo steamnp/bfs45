@@ -1,18 +1,20 @@
 function App() {
   const personArr = ['Alex', 25]
 
-  // console.log(personArr[1])
+  personArr.push(7)
 
-  const person = {
-    name: {
-      firstName: 'Gorakh',
-      lastName: 'Joshi',
-    },
-    age: 25,
-    '#SN': 1,
-  }
+  console.log(personArr)
 
-  console.log(person.name.firstName)
+  // const person = {
+  //   name: {
+  //     firstName: 'Gorakh',
+  //     lastName: 'Joshi',
+  //   },
+  //   age: 25,
+  //   '#SN': 1,
+  // }
+
+  // console.log(person)
 
   return <div>App</div>
 }
