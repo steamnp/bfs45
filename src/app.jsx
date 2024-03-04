@@ -17,7 +17,7 @@ function App() {
     console.log(input);
     let primeNumber = true;
 
-    if (input == 0 || input == 1) {
+    if (input == 0 || input == 1 || input < 0) {
       primeNumber = false;
     } else if (input > 1) {
       for (let j = 2; j < input; j++) {
@@ -33,7 +33,7 @@ function App() {
     <>
       <div>
         {addOddNum()}
-        {checkPrime(8)}
+        {checkPrime(7)}
       </div>
     </>
   );
