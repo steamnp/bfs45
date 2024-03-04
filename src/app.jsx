@@ -1,22 +1,30 @@
 function App() {
-  const personArr = ['Alex', 25]
-
-  personArr.push(7)
-
-  console.log(personArr)
-
-  // const person = {
-  //   name: {
-  //     firstName: 'Gorakh',
-  //     lastName: 'Joshi',
-  //   },
-  //   age: 25,
-  //   '#SN': 1,
+  // function in javascript
+  // Function declaration -> Hoisting issue
+  // console.log(add(2, 3))
+  // function add(firstNumber, secondNuber) {
+  //   return firstNumber + secondNuber
   // }
 
-  // console.log(person)
+  // Function Expression -> ES6 -> Not hoisted
+  // const add = function (firstNumber, secondNuber) {
+  //   return firstNumber + secondNuber
+  // }
 
-  return <div>App</div>
+  // Arrow Function -> ES6 -> Not hoisted
+  const add = (firstNumber, secondNumber) => firstNumber + secondNumber
+
+  // console.log(myCountry)
+  // var myCountry = 'Nepal' // var is also hoisted
+
+  const firstName = 'Gorakh'
+  const lastName = 'Joshi'
+
+  if (firstName) {
+    const fullName = `${firstName} ${lastName}`
+  }
+
+  return <h1>{add(1.2, 3.2)}</h1>
 }
 
 export default App
