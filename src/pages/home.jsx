@@ -1,24 +1,18 @@
-import Button from "../component/button";
-// import Store from './store'
-
 function Home() {
-  return (
-    <div>
-      <Button>123456</Button>
-      <Button type="view">123456</Button>
-      {/* <Button type="view-all">New Button</Button>
-      <Button type="back" /> */}
-      {/* <Store /> */}
-    </div>
-  );
+  // create a variable to store number
+  const age = 20;
+
+  // create a variable to store string
+
+  // create a variable to store boolean
+
+  // create a variable to store array of numbers and strings
+
+  // create a variable to store object with properties and values
+
+  // Display value of each variable in JSX
+
+  return <div>{age}</div>;
 }
-
-// <div className="sth" id="one"></div> -> className,id are attribute
-
-//<Button buttonText={} /> -> buttonText -> prop
 
 export default Home;
-
-{
-  /* <button>Home button</button> */
-}
