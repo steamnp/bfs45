@@ -1,28 +1,11 @@
-import React from 'react'
+// import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Home from './pages/home'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { RouterProvider } from 'react-router-dom'
+import { router } from './routes/routes'
 import './index.css'
-import Store from './pages/store'
-import Contact from './pages/contact'
-
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <Home />,
-  },
-  {
-    path: '/store',
-    element: <Store />,
-  },
-  {
-    path: '/contact',
-    element: <Contact />,
-  },
-])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
+  // <React.StrictMode>
+  <RouterProvider router={router} />
+  // </React.StrictMode>
 )

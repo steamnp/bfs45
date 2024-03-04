@@ -1,18 +1,31 @@
 function Home() {
-  // create a variable to store number
-  const age = 20
+  // Primitive values
+  const myName = 'Gorakh'
+  const favNum = 7.5
+  const isPrime = false
+  let myCountry
+  const anotherCountry = null
 
-  // create a variable to store string
+  console.log(typeof anotherCountry)
 
-  // create a variable to store boolean
+  // Non-primitive values -> Object
+  // 2,3,5
+  const primeNumbers = [2, 3, 5]
+  // Alex, 35, 7
+  const person = ['Alex', 35, 7]
+  // firstName -> Alex, age -> 35, favNumm -> 7
+  const newPerson = {
+    firstName: 'Alex',
+    age: 35,
+    favNum: 7,
+  }
 
-  // create a variable to store array of numbers and strings
+  // console.log(typeof myCountry)
 
-  // create a variable to store object with properties and values
+  // Falsy value
+  // null, 0, undefined, NaN, '', false
 
-  // Display value of each variable in JSX
-
-  return <div>{age}</div>
+  return <div>Hello</div>
 }
 
 export default Home
