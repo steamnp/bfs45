@@ -2,19 +2,20 @@ import style from "../../styles/components/app.module.scss";
 import Button from "../button/button";
 
 function App() {
+  const oddSum = (listOfNumbers) => {
+    let sum = 0;
+
+    for (let n of listOfNumbers) {
+      if (n % 2 !== 0) sum += n;
+    }
+
+    return sum;
+  };
+
   return (
     <>
-      <div className={style.app}>
-        <div>
-          Hello,World
-          <br />
-          <small>Satshree Shrestha</small>
-        </div>
-      </div>
-      <br />
       <div style={{ padding: "1rem" }}>
-        <Button>Main Button</Button>
-        <Button type="btn-remove">Remove Button</Button>
+        The sum of odd numbers: {oddSum([1, 2, 3, 4, 5, 6, 7, 8, 9])}
       </div>
     </>
   );
