@@ -1,26 +1,13 @@
 import Button from "../component/button";
+import Store from "./store";
 
 function Home() {
-  const num = 10;
-
-  const str = "hello";
-
-  const bool = true;
-
-  const arr = [10, "hi", false, 10.99];
-
-  const obj = {
-    name: "john doe",
-    age: 22,
-  };
-
   return (
     <div>
-      <div>{`number: ${num}`}</div>
-      <div>{`string: ${str}`}</div>
-      <div>{`boolean: ${bool}`}</div>
-      <div>{`array: ${arr}`}</div>
-      <div>{`object: ${JSON.stringify(obj)}`}</div>
+      <Button type="view-all">Home Button</Button>
+      <Store />
+      <Button type="remove">New Button</Button>
+      <Button />
     </div>
   );
 }
