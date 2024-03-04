@@ -8,9 +8,7 @@ import style from "./button.module.css";
 
 function Button({ type, children = "Button" }) {
   return (
-    <button
-      className={`${style.button} ${type ? style[`button--${type}`] : ""}`}
-    >
+    <button className={`button ${type ? `button--${type}` : ""}`}>
       {children}
     </button>
   );

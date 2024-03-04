@@ -1,0 +1,41 @@
+/* CSS Flex Layout mode */
+.button {
+  cursor: pointer;
+  display: block;
+  /* justify-content: center;
+  align-items: center; */
+  width: 20px;
+  height: 48px;
+  background-color: rgba(216, 91, 83, 0.7);
+  /* border: none; */
+  padding: 5px 5px;
+  border: 1px solid orange;
+}
+/* 42x60 */
+
+/* .button--view {
+}
+
+.button--view--all {
+}
+
+.button--remove {
+}
+
+.button--back {
+}
+
+.button--get-started {
+} */
+
+/* 1081-up */
+/* @media only screen and() {
+} */
+
+/* 501-1080 */
+/* @media only screen and() {
+} */
+
+/* 0 - 500px */
+/* @media only screen and() {
+} */
