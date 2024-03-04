@@ -5,11 +5,11 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import Store from "./pages/store";
 import Contact from "./pages/contact";
-import Button from "./component/button";
+import Assignment from "./pages/assignment";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/home",
     element: <Home />,
   },
   {
@@ -19,6 +19,10 @@ const router = createBrowserRouter([
   {
     path: "/contact",
     element: <Contact />,
+  },
+  {
+    path: "/",
+    element: <Assignment />,
   },
 ]);
 

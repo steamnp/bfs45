@@ -1,0 +1,10 @@
+.outerDiv {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.quesAnsDiv {
+  margin-bottom: 1rem;
+}
