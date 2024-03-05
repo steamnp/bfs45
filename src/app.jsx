@@ -1,30 +1,39 @@
-function App() {
-  // function in javascript
-  // Function declaration -> Hoisting issue
-  // console.log(add(2, 3))
-  // function add(firstNumber, secondNuber) {
-  //   return firstNumber + secondNuber
-  // }
-
-  // Function Expression -> ES6 -> Not hoisted
-  // const add = function (firstNumber, secondNuber) {
-  //   return firstNumber + secondNuber
-  // }
-
-  // Arrow Function -> ES6 -> Not hoisted
-  const add = (firstNumber, secondNumber) => firstNumber + secondNumber
-
-  // console.log(myCountry)
-  // var myCountry = 'Nepal' // var is also hoisted
-
-  const firstName = 'Gorakh'
-  const lastName = 'Joshi'
-
-  if (firstName) {
-    const fullName = `${firstName} ${lastName}`
+import React from 'react'
+ 
+const App = () => {
+  let data = ''
+  const addOdd = (array) => {
+    let total = 0
+    array.map((element) => {
+      if(element % 2 !== 0){
+        total += element
+      }
+    })
+    console.log(total)
+    data += 'Add Odd = ' + total + ', '
   }
-
-  return <h1>{add(1.2, 3.2)}</h1>
+ 
+  const isPrime = (number) => {
+    let count = 0
+    for(let i=1; i<=number; i++){
+      if(number % i === 0){
+        count++
+      }
+    }
+    if(count === 2){
+      console.log("Is Prime!")
+      data += number + ' Is Prime!'
+    } else {
+      console.log("Is not Prime!")
+      data += number + ' Is not Prime!'
+    }
+  }
+ 
+  addOdd([1,2,3,4,5,7])
+  isPrime(13)
+  return (
+    <div>{data}</div>
+  )
 }
-
+ 
 export default App
