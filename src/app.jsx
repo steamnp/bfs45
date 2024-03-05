@@ -1,16 +1,18 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 function App() {
-  // Array Destructuring
+  console.log('App component running!')
   const [count, setCount] = useState(0)
-  // count -> state variable
-  // setCount -> state updating function (it will update count)
 
-  console.log('running! app component')
+  // 2 inputs -> 1st input is the callback function, 2nd is dependency array
+  // useEffect will run (at the end) after component rendering/re-rendering is completed
+  useEffect(() => {
+    console.log('useEffect Hook is running!')
+  })
 
-  // Whenever state is updated in react, component will re-render (run again)
+  console.log('Running After useEffect hook')
 
-  return <button onClick={() => setCount(count + 1)}>{count}</button>
+  return <button onClick={() => setCount((prevValue) => prevValue + 1)}>{count}</button>
 }
 
 export default App
