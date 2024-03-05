@@ -1,30 +1,16 @@
+import { useState } from 'react'
+
 function App() {
-  // function in javascript
-  // Function declaration -> Hoisting issue
-  // console.log(add(2, 3))
-  // function add(firstNumber, secondNuber) {
-  //   return firstNumber + secondNuber
-  // }
+  // Array Destructuring
+  const [count, setCount] = useState(0)
+  // count -> state variable
+  // setCount -> state updating function (it will update count)
 
-  // Function Expression -> ES6 -> Not hoisted
-  // const add = function (firstNumber, secondNuber) {
-  //   return firstNumber + secondNuber
-  // }
+  console.log('running! app component')
 
-  // Arrow Function -> ES6 -> Not hoisted
-  const add = (firstNumber, secondNumber) => firstNumber + secondNumber
+  // Whenever state is updated in react, component will re-render (run again)
 
-  // console.log(myCountry)
-  // var myCountry = 'Nepal' // var is also hoisted
-
-  const firstName = 'Gorakh'
-  const lastName = 'Joshi'
-
-  if (firstName) {
-    const fullName = `${firstName} ${lastName}`
-  }
-
-  return <h1>{add(1.2, 3.2)}</h1>
+  return <button onClick={() => setCount(count + 1)}>{count}</button>
 }
 
 export default App
