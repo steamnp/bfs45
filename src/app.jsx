@@ -1,6 +1,3 @@
-import style from "../../styles/components/app.module.scss";
-import Button from "../button/button";
-
 function App() {
   const oddSum = (listOfNumbers) => {
     let sum = 0;
