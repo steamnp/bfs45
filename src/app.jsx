@@ -1,20 +1,16 @@
 function App() {
-  const oddSum = (listOfNumbers) => {
-    let sum = 0;
-
-    for (let n of listOfNumbers) {
-      if (n % 2 !== 0) sum += n;
-    }
-
-    return sum;
-  };
+  const oddSum = (listOfNumbers) =>
+    listOfNumbers.reduce((sum, num) => {
+      if (num % 2 !== 0) sum += num;
+      return sum;
+    });
 
   const isPrime = (num) => {
     if (num < 2) return false;
 
     let i = 2;
 
-    while (i < num - 1) {
+    while (i < num / 2) {
       if (num % i === 0) return false;
       i++;
     }
@@ -33,7 +29,5 @@ function App() {
     </>
   );
 }
-
-// <></> -> React Fragment
 
 export default App;
