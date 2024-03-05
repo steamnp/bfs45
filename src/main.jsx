@@ -1,11 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Home from './pages/home'
-
+import Sum from './sumOfOdd'
+import Prime from './isPrime'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Home />
-    
+  <Sum />
+  <Prime />
   </React.StrictMode>
 )
