@@ -16,11 +16,15 @@ function Home() {
   const [countries, setCountries] = useState([]);
 
   useEffect(() => {
-    const fetchCountries = async () => await getCountryList();
+    try {
+      const fetchCountries = async () => await getCountryList();
 
-    fetchCountries().then((data) => {
-      setCountries(data);
-    });
+      fetchCountries().then((data) => {
+        setCountries(data);
+      });
+    } catch (error) {
+      setError(JSON.stringify(error));
+    }
   }, []);
 
   const getCountries = countries.filter((country) =>
