@@ -9,7 +9,7 @@ export async function getCountryList() {
 }
 
 export async function getCountryDetail(country) {
-  const detail = await fetch(COUNTRY_DETAIL_API + country);
+  const detail = await fetch(COUNTRY_DETAIL_API + country + "?fullText=true");
   const detailJSON = await detail.json();
 
   return detailJSON;
