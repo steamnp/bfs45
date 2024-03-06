@@ -1,18 +1,43 @@
 import { useState, useEffect } from 'react'
 
+// Synchronous Code
+// Asynchronous Code -> This code will always run at the end of synchronous code
+
+// Promise
+// -Pending
+// -resolved (success)
+// -rejected (failure -> reason (error))
+
 function App() {
-  console.log('App component running!')
-  const [count, setCount] = useState(0)
+  console.log('I am from 1st line of app component')
+  const [products, setProducts] = useState(0)
 
-  // 2 inputs -> 1st input is the callback function, 2nd is dependency array
-  // useEffect will run (at the end) after component rendering/re-rendering is completed
   useEffect(() => {
-    console.log('useEffect Hook is running!')
-  })
+    console.log('I am inside useEffect and before fetch')
+    // To handle promise we either use then method or async await
+    // async/await -> ES8
 
-  console.log('Running After useEffect hook')
+    // WEB API's
+    fetch('https://bfs45.gorakhjoshi.com/api/v1/product/all')
+      .then((res) => {
+        console.log('I am from first then method!')
+        return res.json()
+      })
+      .then((data) => {
+        console.log('I am from second then method!')
+      })
 
-  return <button onClick={() => setCount((prevValue) => prevValue + 1)}>{count}</button>
+    // Synchronous Code (blocking code)
+    // for (let i = 0; i <= 100000; i++) {
+    //   console.log('running!')
+    // }
+
+    console.log('I am inside useEffect and after fetch')
+  }, [])
+
+  console.log('I am after useEffect hook')
+
+  return <button>{console.log('I am from inside of JSX!')}</button>
 }
 
 export default App
