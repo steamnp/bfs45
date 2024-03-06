@@ -1,0 +1,59 @@
+.detail-card {
+  border: 0.8px solid #c9c9c9;
+  border-radius: 8px;
+
+  padding: 1.5rem 1.75rem;
+  /* margin: 1rem; */
+
+  width: 90%;
+}
+
+.title {
+  font-size: 28px;
+}
+
+.subtitle {
+  font-size: 22px;
+  color: gray;
+}
+
+.flag-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flag {
+  /* font-size: 48px; */
+  width: 100px;
+  margin-right: 1rem;
+}
+
+.coat {
+  /* font-size: 48px; */
+  width: 200px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flag-detail {
+  /* width: 600px; */
+  margin-top: 1rem;
+  text-align: justify;
+
+  display: flex;
+  align-items: center;
+}
+
+.detail-list {
+  margin-top: 1rem;
+}
+
+.detail-title {
+  font-weight: 550;
+  margin-right: 0.5rem;
+}

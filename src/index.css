@@ -27,6 +27,8 @@
 }
 
 .btn {
+  text-decoration: none;
+
   border: none;
   border-radius: 8px;
 
@@ -35,6 +37,10 @@
 
   margin-left: 0.5rem;
   padding: 0.5rem 1rem;
+}
+
+.btn:visited {
+  color: white;
 }
 
 .btn:last-child {
