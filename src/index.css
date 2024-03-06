@@ -37,9 +37,9 @@
   padding: 0.5rem 1rem;
 }
 
-/* .btn:last-child {
+.btn:last-child {
   margin-right: 0;
-} */
+}
 
 .btn:hover {
   cursor: pointer;

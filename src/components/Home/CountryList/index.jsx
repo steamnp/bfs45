@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import style from "./list.module.css";
+import { Link } from "react-router-dom";
 
 const getRandomCountryName = (countries) =>
   countries[Math.floor(Math.random() * countries.length)];
@@ -34,11 +35,18 @@ function CountryList(props) {
         </div>
       </div>
       <br />
-      {countryList.map((country, index) => (
-        <div key={index} className={style.list}>
-          {country.name.common}
-        </div>
-      ))}
+      <div className={style["list-container"]}>
+        {countryList.map((country, index) => (
+          <Link
+            to={`/details/${country.name.common.toLowerCase()}/`}
+            key={index}
+            className={style.list}
+          >
+            <span className={style.flag}>{country.flag}</span>
+            {country.name.common}
+          </Link>
+        ))}
+      </div>
     </div>
   );
 }
