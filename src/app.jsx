@@ -9,35 +9,101 @@ import { useState, useEffect } from 'react'
 // -rejected (failure -> reason (error))
 
 function App() {
-  console.log('I am from 1st line of app component')
-  const [products, setProducts] = useState(0)
+  // products -> state variable
+  const [products, setProducts] = useState()
+  const [error, setError] = useState('')
 
   useEffect(() => {
-    console.log('I am inside useEffect and before fetch')
     // To handle promise we either use then method or async await
     // async/await -> ES8
 
-    // WEB API's
-    fetch('https://bfs45.gorakhjoshi.com/api/v1/product/all')
-      .then((res) => {
-        console.log('I am from first then method!')
-        return res.json()
-      })
-      .then((data) => {
-        console.log('I am from second then method!')
-      })
+    // then method
+    // fetch('https://bfs45.gorakhjoshi.com/api/v1/product/all')
+    // .then((res) => res.json())
+    // .then((data) => {
+    //   if (data.success) {
+    //     setProducts(data.products)
+    //   } else {
+    //     setError(data.message)
+    //   }
+    // })
+    // .catch((error) => {
+    //   setError(error.message)
+    // })
 
-    // Synchronous Code (blocking code)
-    // for (let i = 0; i <= 100000; i++) {
-    //   console.log('running!')
-    // }
+    // async await
+    const getAllProducts = async () => {
+      try {
+        const res = await fetch('https://bfs45.gorakhjoshi.com/api/v1/product/all')
+        const data = await res.json()
 
-    console.log('I am inside useEffect and after fetch')
+        if (data.success) {
+          setProducts(data.products)
+        } else {
+          setError(data.message)
+        }
+      } catch (error) {
+        setError(error.message)
+      }
+    }
+
+    getAllProducts()
   }, [])
 
-  console.log('I am after useEffect hook')
+  // console.log(
+  //   products &&
+  //     products.map(() => {
+  //       return <div>Hello</div>
+  //     })
+  // )
 
-  return <button>{console.log('I am from inside of JSX!')}</button>
+  // string, number, object, function, undefined
+
+  return (
+    <>
+      {products &&
+        products.map((product) => {
+          return (
+            <div key={product.hgjhjghjh}>
+              <img src={product.photo.url} />
+              <div>{product.name}</div>
+            </div>
+          )
+        })}
+
+      {error && <div>{error}</div>}
+    </>
+  )
 }
+
+// products[0].name -> undefined[0]
+
+// falsy values
+// null, undefined, '', false, 0, NaN
+
+// || -> will be short circuited at truthy value
+// '' || null || 0 -> 0
+
+// undefined || <div>{false}</div> || null -> <div>{false}</div>
+
+// && -> will be short circuited at falsy value
+// '' && null && 0 -> ''
+
+// <h1>Hello</h1> && <div>{false}</div> && 'undefined' && null -> null
+
+//  1 && 2 -> 2
+
+// SHORT CIRCUITING OPERATOR (&&, ||)
+// && logical AND operator
+// 0 && 0 -> 0
+// 0 && 1 -> 0
+// 1 && 0 -> 0
+// 1 && 1 -> 1
+
+// || logical OR operator
+// 0 || 0 -> 0
+// 0 || 1 -> 1
+// 1 || 0 -> 1
+// 1 || 1 -> 1
 
 export default App
