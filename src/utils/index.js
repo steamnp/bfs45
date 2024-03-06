@@ -3,12 +3,14 @@ const COUNTRY_DETAIL_API = "https://restcountries.com/v3.1/name/"; // ADD COUNTR
 
 export async function getCountryList() {
   const countries = await fetch(COUNTRY_LIST_API);
+  const countryJSON = await countries.json();
 
-  return await countries.json();
+  return countryJSON;
 }
 
 export async function getCountryDetail(country) {
   const detail = await fetch(COUNTRY_DETAIL_API + country);
+  const detailJSON = await detail.json();
 
-  return await detail.json();
+  return detailJSON;
 }
