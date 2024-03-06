@@ -33,8 +33,13 @@
   color: white;
   background-color: #1b5fc4;
 
+  margin-left: 0.5rem;
   padding: 0.5rem 1rem;
 }
+
+/* .btn:last-child {
+  margin-right: 0;
+} */
 
 .btn:hover {
   cursor: pointer;
