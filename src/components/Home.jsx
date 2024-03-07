@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import "./styles/country.css";
+import "../styles/country.css";
 
-function App() {
+function Home() {
   const [countries, setCountries] = useState([]);
   const [error, setError] = useState("");
 
@@ -41,4 +41,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
