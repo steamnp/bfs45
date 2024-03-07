@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+
+import Button from "../Button";
+import CountryCounter from "../CountryCounter";
 
 import style from "./list.module.css";
-import { Link } from "react-router-dom";
-import Button from "../Button";
 
 const getRandomCountryName = (countries) =>
   countries[Math.floor(Math.random() * countries.length)];
@@ -18,7 +20,7 @@ function CountryList(props) {
   return (
     <div>
       <div className="center" style={{ justifyContent: "space-between" }}>
-        Total Countries: {countryList.length}
+        <CountryCounter length={countryList.length} />
         <div>
           Not sure what country to name?
           <Button
