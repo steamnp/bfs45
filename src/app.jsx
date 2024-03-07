@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react'
+import { guidGenerator } from './utils'
+import { v4 as uuidv4 } from 'uuid'
 
 // Synchronous Code
 // Asynchronous Code -> This code will always run at the end of synchronous code
@@ -59,12 +61,14 @@ function App() {
 
   // string, number, object, function, undefined
 
+  console.log(uuidv4())
+
   return (
     <>
       {products &&
         products.map((product) => {
           return (
-            <div key={product.hgjhjghjh}>
+            <div key={uuidv4()}>
               <img src={product.photo.url} />
               <div>{product.name}</div>
             </div>
