@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import Button from "../Button";
 import CountryCounter from "../CountryCounter";
+import FlexBox from "../FlexBox";
 
 import style from "./list.module.css";
 
@@ -19,7 +20,7 @@ function CountryList(props) {
 
   return (
     <div>
-      <div className="center" style={{ justifyContent: "space-between" }}>
+      <FlexBox>
         <CountryCounter length={countryList.length} />
         <div>
           Not sure what country to name?
@@ -33,7 +34,7 @@ function CountryList(props) {
           </Button>
           <Button onClick={() => props.setSearch("")}>Clear Search</Button>
         </div>
-      </div>
+      </FlexBox>
       <br />
       <div className={style["list-container"]}>
         {countryList.map((country, index) => (

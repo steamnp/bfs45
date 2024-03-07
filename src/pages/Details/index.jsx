@@ -2,7 +2,9 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 import { getCountryDetail } from "../../utils";
+
 import Button from "../../components/Button";
+import FlexBox from "../../components/FlexBox";
 
 import style from "./details.module.css";
 
@@ -31,7 +33,7 @@ function Details() {
         </> // ERROR
       ) : detail ? (
         <>
-          <div className={style.header}>
+          <FlexBox>
             <div>
               <div className={style.title}>{detail.name.official}</div>
               <div className={style.subtitle}>{detail.name.common}</div>
@@ -43,7 +45,7 @@ function Details() {
                 alt="coat"
               />
             </div>
-          </div>
+          </FlexBox>
           <div>
             <div className={style["detail-list"]}>
               <span className={style["detail-title"]}>Region:</span>
@@ -69,23 +71,21 @@ function Details() {
               They are {detail.unMember ? "" : "not"} a United Nations Member
             </div>
           </div>
-          <div></div>
-          <div></div>
           <br />
           <div className={style["flag-detail"]}>
             <img src={detail.flags.svg} className={style.flag} alt="flag" />
             {detail.flags.alt}
           </div>
           <br />
-          <div className="center">
+          <FlexBox center={true}>
             <Button to="/" as="link">
               Go Back
             </Button>
-          </div>
+          </FlexBox>
         </>
       ) : (
         <>
-          <div className="center">Hang in there... fetching data...</div>
+          <FlexBox center={true}>Hang in there... fetching data...</FlexBox>
         </>
       )}
     </div>

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { getCountryList } from "../../utils";
 
 import CountryList from "../../components/CountryList";
+import FlexBox from "../../components/FlexBox";
 
 import style from "./home.module.css";
 
@@ -33,7 +34,7 @@ function Home() {
 
   return (
     <div>
-      <div className="center">
+      <FlexBox center={true}>
         <input
           className="input-control"
           placeholder="Country Name..."
@@ -41,30 +42,30 @@ function Home() {
           onChange={(e) => setSearch(e.target.value)}
           disabled={countries.length === 0}
         />
-      </div>
+      </FlexBox>
       <br />
       <div className={style.main}>
         {
           error ? (
             <>
-              <div className="center">Something went wrong.</div>
+              <FlexBox center={true}>Something went wrong.</FlexBox>
               <br />
-              <div className="center">{error}</div>
+              <FlexBox center={true}>{error}</FlexBox>
               <br />
-              <div className="center">
+              <FlexBox center={true}>
                 <button
                   className="btn"
                   onClick={() => window.location.reload(true)}
                 >
                   Refresh Page
                 </button>
-              </div>
+              </FlexBox>
             </> // ERROR
           ) : countries.length === 0 ? (
             <>
-              <div className="center">
+              <FlexBox center={true}>
                 Hang in there... fetching countries...
-              </div>
+              </FlexBox>
             </> // EMPTY
           ) : (
             <>
