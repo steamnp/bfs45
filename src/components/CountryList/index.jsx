@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import style from "./list.module.css";
 import { Link } from "react-router-dom";
+import Button from "../Button";
 
 const getRandomCountryName = (countries) =>
   countries[Math.floor(Math.random() * countries.length)];
@@ -20,18 +21,15 @@ function CountryList(props) {
         Total Countries: {countryList.length}
         <div>
           Not sure what country to name?
-          <button
-            className="btn"
+          <Button
             onClick={() => {
               props.setSearch(countryName);
               setCountryName(getRandomCountryName(props.countryNames));
             }}
           >
             Try {countryName}
-          </button>
-          <button className="btn" onClick={() => props.setSearch("")}>
-            Clear Search
-          </button>
+          </Button>
+          <Button onClick={() => props.setSearch("")}>Clear Search</Button>
         </div>
       </div>
       <br />

@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 import { getCountryDetail } from "../../utils";
+import Button from "../../components/Button";
 
 import style from "./details.module.css";
 
@@ -77,9 +78,9 @@ function Details() {
           </div>
           <br />
           <div className="center">
-            <Link to="/" className="btn">
+            <Button to="/" as="link">
               Go Back
-            </Link>
+            </Button>
           </div>
         </>
       ) : (
