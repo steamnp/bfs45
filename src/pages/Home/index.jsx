@@ -6,6 +6,7 @@ import CountryList from "../../components/CountryList";
 import FlexBox from "../../components/FlexBox";
 
 import style from "./home.module.css";
+import Input from "../../components/Input";
 
 function getCountryListWithNames(countryList) {
   return countryList.map((country) => country.name.common);
@@ -35,8 +36,7 @@ function Home() {
   return (
     <div>
       <FlexBox center={true}>
-        <input
-          className="input-control"
+        <Input
           placeholder="Country Name..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
