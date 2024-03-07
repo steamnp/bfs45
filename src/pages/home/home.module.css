@@ -1,0 +1,21 @@
+.image {
+  width: 200px;
+  height: 200px;
+}
+
+.home {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.country {
+  margin: 10px;
+  padding: 10px;
+}
+
+.name {
+  color: white;
+}
