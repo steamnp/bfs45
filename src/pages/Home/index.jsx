@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import { getCountryList } from "../../utils";
 
-import CountryList from "./CountryList";
+import CountryList from "../../components/CountryList";
 
 import style from "./home.module.css";
 
