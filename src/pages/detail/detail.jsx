@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import style from "./detail.module.css";
+import { v4 as uuidv4 } from "uuid";
 
 function Detail() {
   const [countryDetail, setCountryDetail] = useState();
@@ -30,10 +31,10 @@ function Detail() {
   return (
     <div>
       {countryDetail &&
-        countryDetail.map((country, index) => {
+        countryDetail.map((country) => {
           return (
             <>
-              <div key={index} className={style.country}>
+              <div key={uuidv4()} className={style.country}>
                 <img src={country.flags.svg} className={style.image} />
                 <ul>
                   <li>Name - {country.name.common}</li>

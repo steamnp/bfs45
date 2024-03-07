@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import style from "./home.module.css";
 import { useEffect, useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 function Home() {
   const [countries, setCountries] = useState();
@@ -27,12 +28,14 @@ function Home() {
     getAllCountries();
   }, []);
 
+  console.log(uuidv4());
+
   return (
     <div className={style.home}>
       {countries &&
-        countries.map((country, index) => {
+        countries.map((country) => {
           return (
-            <div key={index} className={style.country}>
+            <div key={uuidv4()} className={style.country}>
               <Link to={`/country-detail/${country.name.common}`}>
                 <img src={country.flags.svg} className={style.image} />
                 <div className={style.name}>{country.name.common}</div>
