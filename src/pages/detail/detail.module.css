@@ -12,8 +12,15 @@
 }
 
 .country ul li {
-  color: white;
+  color: whitesmoke;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 1.5rem;
   list-style: none;
+}
+
+.goBack {
+  color: black;
+  background-color: aqua;
+  max-width: fit-content;
+  text-decoration: none;
 }

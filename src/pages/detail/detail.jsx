@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import style from "./detail.module.css";
 
 function Detail() {
@@ -32,18 +32,24 @@ function Detail() {
       {countryDetail &&
         countryDetail.map((country, index) => {
           return (
-            <div key={index} className={style.country}>
-              <img src={country.flags.svg} className={style.image} />
-              <ul>
-                <li>Name - {country.name.common}</li>
-                <li>Population - {country.population}</li>
-                <li>Region - {country.region}</li>
-                <li>Capital - {country.capital}</li>
-                <li>Languages - {Object.values(country.languages) + ""}</li>
-              </ul>
-            </div>
+            <>
+              <div key={index} className={style.country}>
+                <img src={country.flags.svg} className={style.image} />
+                <ul>
+                  <li>Name - {country.name.common}</li>
+                  <li>Population - {country.population}</li>
+                  <li>Region - {country.region}</li>
+                  <li>Capital - {country.capital}</li>
+                  <li>Languages - {Object.values(country.languages) + ""}</li>
+                </ul>
+              </div>
+              <Link to="/" className={style.goBack}>
+                Go to Home Page
+              </Link>
+            </>
           );
         })}
+
       {error && (
         <div className="error">
           {`Error fetching data for ${url}: ` + error}
