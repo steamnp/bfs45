@@ -31,17 +31,23 @@ function CountryDetail() {
     return (
         <div>
             <div >
-                {country &&
-                    country.map((country) => (
-                        <div key={country.name.common}>
-                            <span className="country-name">{country.name.common}</span>
+
+                {country && country.map((countryZ) => {
+                    return (
+                        <div key={countryZ.name.common}>
+                            <span className="country-name">{countryZ.name.common}</span>
 
                             <img
-                                src={country.flags.svg}
-                                alt={`Flag of ${country.name.common}`}
+                                src={countryZ.flags.svg}
+                                alt={`Flag of ${countryZ.name.common}`}
                             />
                         </div>
-                    ))}
+                    )
+
+                }
+
+                )}
+
                 {error && <div>{error}</div>}
             </div>
 
