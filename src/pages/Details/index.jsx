@@ -35,17 +35,21 @@ function Details() {
         </> // ERROR
       ) : detail ? (
         <>
-          <FlexBox>
+          <FlexBox style={{ minHeight: 200 }}>
             <div>
               <div className={style.title}>{detail.name.official}</div>
               <div className={style.subtitle}>{detail.name.common}</div>
             </div>
             <div>
-              <img
-                src={detail.coatOfArms.svg}
-                className={style.coat}
-                alt="coat"
-              />
+              {detail.coatOfArms.svg ? (
+                <img
+                  src={detail.coatOfArms.svg}
+                  className={style.coat}
+                  alt="coat"
+                />
+              ) : (
+                <small>No Coat of Arms</small>
+              )}
             </div>
           </FlexBox>
           <div>
@@ -76,7 +80,7 @@ function Details() {
           <br />
           <div className={style["flag-detail"]}>
             <img src={detail.flags.svg} className={style.flag} alt="flag" />
-            {detail.flags.alt}
+            {detail.flags.alt || "No flag description available"}
           </div>
           <br />
           <FlexBox center={true}>
