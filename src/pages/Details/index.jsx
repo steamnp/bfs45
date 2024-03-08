@@ -17,9 +17,11 @@ function Details() {
     try {
       const fetchDetail = async () => await getCountryDetail(name);
 
-      fetchDetail().then((data) => setDetail(data[0]));
+      fetchDetail()
+        .then((data) => setDetail(data[0]))
+        .catch((error) => setError(error.message));
     } catch (error) {
-      setError(JSON.stringify(error));
+      setError(JSON.stringify(error.message));
     }
   }, []);
 

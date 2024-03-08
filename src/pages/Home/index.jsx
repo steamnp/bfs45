@@ -21,11 +21,11 @@ function Home() {
     try {
       const fetchCountries = async () => await getCountryList();
 
-      fetchCountries().then((data) => {
-        setCountries(data);
-      });
+      fetchCountries()
+        .then((data) => setCountries(data))
+        .catch((error) => setError(error.message));
     } catch (error) {
-      setError(JSON.stringify(error));
+      setError(error.message);
     }
   }, []);
 
