@@ -5,8 +5,8 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-import Home from "./components/Home";
-import CountryDetails from "./components/CountryDetails";
+import Home from "./page/Home";
+import CountryDetails from "./page/CountryDetails";
 
 
 
@@ -16,7 +16,7 @@ const router = createBrowserRouter([
     element: <Home />
   },
   {
-    path: "/country/:countryName",
+    path: "/:countryName",
     element: <CountryDetails/>
   },
 ]);
@@ -26,3 +26,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <RouterProvider router={router}/>
   // </StrictMode>
 )
+

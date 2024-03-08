@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { Link } from 'react-router-dom'
+
 import "../styles/country.css";
 
 function Home() {
@@ -27,12 +29,14 @@ function Home() {
         {countries &&
           countries.map((country) => (
             <div key={country.name.common} className="country-container">
+              <Link to={`/${country.name.common}`}>
               <img
                 src={country.flags.svg}
                 alt={`Flag of ${country.name.common}`}
                 className="country-flag"
               />
               <span className="country-name">{country.name.common}</span>
+              </Link>
             </div>
           ))}
         {error && <div>{error}</div>}
