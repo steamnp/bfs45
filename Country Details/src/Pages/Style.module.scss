@@ -1,0 +1,47 @@
+.home{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: rgba(204, 242, 247, 0.5);
+    align-items:center;
+}
+
+.img{
+    height:150px;
+    width: auto;
+    border-width: 10px;
+    padding: 30px;
+}
+
+.name{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+    font-weight: 1000;
+    padding: 8px;
+}
+
+.details{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: relative;
+    font-size: large;
+    font-weight: 500;
+    padding: 45px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: rgba(204, 242, 247, 0.5);
+    align-items:center;
+    margin: 120px;
+    border-radius: 20px;
+    height: 500px;
+    width: auto;
+}
+
+.img1{
+    height: 200px;
+    width: auto;
+    padding: 30px;
+}
