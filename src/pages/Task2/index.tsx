@@ -11,9 +11,13 @@ function Task2() {
   return (
     <div>
       {error ? (
-        <div className={style.info}>Oh no, there was an error</div>
+        <div className={style.info}>
+          Something went wrong
+          <br />
+          {JSON.stringify(error)}
+        </div>
       ) : isLoading ? (
-        <div className={style.info}>Loading...</div>
+        <div className={style.info}>Hang in there... Fetching data...</div>
       ) : data ? (
         <div>
           {data.results.map((pokemon: Pokemon) => (
