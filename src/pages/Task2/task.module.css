@@ -1,0 +1,33 @@
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 28px;
+}
+
+.list {
+  color: black;
+  /* font-size: 22px; */
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+
+  padding: 1rem;
+
+  border: 0.8px solid #c9c9c9;
+  border-bottom: none;
+}
+
+.list:first-child {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.list:last-child {
+  border-bottom: 0.8px solid #c9c9c9;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
