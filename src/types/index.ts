@@ -11,7 +11,9 @@ export type Route = {
 };
 
 export type ButtonProps = PropsWithChildren & {
-  onClick: () => void;
+  as?: "button" | "link";
+  to?: string;
+  onClick?: () => void;
   className?: string;
   style?: object;
   type?: "button" | "submit" | "reset";
