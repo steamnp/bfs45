@@ -18,21 +18,22 @@ function Detail() {
         <div className={style.info}>Loading...</div>
       ) : data ? (
         <>
-          <div>
+          <div className={style.center}>
             <img
               src={data.sprites.front_shiny}
-              style={{ width: "200px" }}
+              style={{ width: "300px" }}
               alt={name}
             />
+            <div>{data.name}</div>
           </div>
-          <div>{data.name}</div>
         </>
       ) : null}
       <br />
-      <br />
-      <Button as="link" to={getRoute("Task 2").to} style={{ margin: "0" }}>
-        Go back
-      </Button>
+      <div className={style.center}>
+        <Button as="link" to={getRoute("Task 2").to}>
+          Go back
+        </Button>
+      </div>
     </div>
   );
 }
