@@ -7,7 +7,9 @@ import style from "./nav.module.css";
 function NavBar() {
   const location = useLocation();
 
-  const allRoutes = routes.filter((route) => route.text !== "Task 2 Detail");
+  const allRoutes = routes.filter(
+    (route) => ["Task 2 Detail", "wildcard"].indexOf(route.text) === -1
+  );
 
   return (
     <div className={style.navbar}>

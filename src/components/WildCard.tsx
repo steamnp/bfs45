@@ -1,7 +1,5 @@
-import React from "react";
-
 function WildCard() {
-  return <div>WildCard</div>;
+  return <div>Page Not Found</div>;
 }
 
 export default WildCard;

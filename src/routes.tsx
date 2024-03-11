@@ -20,6 +20,11 @@ export const routes: Route[] = [
     to: "/task2/detail/:name/",
     element: <Detail />,
   },
+  {
+    text: "wildcard",
+    to: "/*",
+    element: <WildCard />,
+  },
 ];
 
 export function getRoute(route: string) {
