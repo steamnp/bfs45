@@ -2,12 +2,15 @@ import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import NavBar from "./components/NavBar";
 
 import { routes } from "./routes";
+import { useEffect } from "react";
 
 function App() {
   const location = useLocation();
   const navigate = useNavigate();
 
-  if (location.pathname === "/") navigate("/task1");
+  useEffect(() => {
+    if (location.pathname === "/") navigate("/task1");
+  }, []);
 
   return (
     <div className="page">
