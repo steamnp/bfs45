@@ -1,0 +1,47 @@
+/* src/components/Home.css */
+.country-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .country-item {
+    margin-bottom: 20px; /* Adjust as needed for spacing between rows */
+    width: 25%; /* Display 4 countries in one row, adjust as needed */
+    box-sizing: border-box;
+  }
+  
+  .country-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #333; /* Adjust text color */
+  }
+  
+  .country-flag {
+    width: 50px; /* Adjust as needed for the flag size */
+    margin-bottom: 10px; /* Adjust as needed for spacing between flag and name */
+  }
+  
+  .country-name {
+    font-size: 16px; /* Adjust as needed for the font size */
+    font-weight: bold; /* Adjust font-weight as needed */
+    text-align: center;
+  }
+  .search-bar {
+    margin-bottom: 20px;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  .country-flag {
+    width: 100px; /* Adjust the size as needed */
+    margin-bottom: 10px;
+  }
+  
