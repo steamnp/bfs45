@@ -17,5 +17,15 @@ export type ButtonProps = PropsWithChildren & {
   type?: "button" | "submit" | "reset";
 };
 
+export type Pokemon = {
+  name: string;
+  url: string;
+};
+
+export type PokemonAPI = {
+  name: string;
+  image: string;
+};
+
 export type AppDispatch = typeof store.dispatch;
 export type RootState = ReturnType<typeof store.getState>;
