@@ -1,53 +1,26 @@
-import { useState, useEffect } from 'react'
-import { IData, IProduct } from './type'
+import { createContext, useState } from 'react'
+import Home from './pages/home'
+import React from 'react'
+import { MyContext } from './context/my-context'
+
+export const menuData = ['Home', 'About', 'Store', 'Contact']
 
 function App() {
-  // products -> state variable
-  // How to type useState hook?
-  const [products, setProducts] = useState<IProduct[]>()
-  const [error, setError] = useState('')
+  const [menu, setMenu] = useState(menuData)
 
-  useEffect(() => {
-    // async await
-    const getAllProducts = async () => {
-      try {
-        const res = await fetch('https://bfs45.gorakhjoshi.com/api/v1/product/all')
-        const data: IData = await res.json()
-
-        if (data.success) {
-          setProducts(data.products)
-        }
-
-        if (data.message) {
-          setError(data.message)
-        }
-      } catch (error) {
-        if (error instanceof Error) {
-          setError(error.message)
-        } else {
-          // Handle non-Error type errors here
-          setError('An unexpected error occurred')
-        }
-      }
-    }
-
-    getAllProducts()
-  }, [])
-
+  function onUpdate(updatedData) {
+    setMenu(updatedData)
+  }
   return (
-    <>
-      {products &&
-        products.map((product) => {
-          return (
-            <div key={product._id}>
-              <img src={product.photo.url} />
-              <div>{product.name}</div>
-            </div>
-          )
+    <MyContext.Provider value={menu}>
+      <div className="container">
+        <div>Menu from App component</div>
+        {menu.map((menuItem, index) => {
+          return <span key={index}>{menuItem}</span>
         })}
-
-      {error && <div>{error}</div>}
-    </>
+        <Home />
+      </div>
+    </MyContext.Provider>
   )
 }
 
