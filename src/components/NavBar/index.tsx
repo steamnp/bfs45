@@ -1,13 +1,24 @@
-import style from "./nav.module.css";
+import { Link, useLocation } from "react-router-dom";
 
 import { routes } from "../../routes";
-import { Link } from "react-router-dom";
+
+import style from "./nav.module.css";
 
 function NavBar() {
+  const location = useLocation();
+
+  const allRoutes = routes.filter((route) => route.text !== "Task 2 Detail");
+
   return (
     <div className={style.navbar}>
-      {routes.map((route) => (
-        <Link className={style.nav} key={route.to} to={route.to}>
+      {allRoutes.map((route) => (
+        <Link
+          className={`${style.nav} ${
+            location.pathname.includes(route.to) ? style.active : null
+          }`}
+          key={route.to}
+          to={route.to}
+        >
           {route.text}
         </Link>
       ))}
