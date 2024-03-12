@@ -1,0 +1,33 @@
+.container{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    height:10px;
+
+
+
+}
+.button{
+    padding: 5px 20px;
+    justify-content: center;
+    margin: 10px;
+    background-color: rgb(218, 225, 126);
+    font-size: larger;
+    justify-content: space-between;
+    border-radius: 10px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+
+}
+.button:hover{
+    background-color: rgb(123, 230, 70);
+}
+.p{ 
+    display:flex;
+    justify-content:center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    align-items: center;
+    font-size: larger;
+    height: 200px;
+    
+    
+}
