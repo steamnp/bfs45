@@ -17,7 +17,7 @@ function CountryDetail() {
                 if (!res.ok) {
                     throw new error("Failed to fetch data");
                 } else {
-                    const data = res.json();
+                    const data = await res.json();
                     setCountry(data);
                 }
             } catch (error) {
