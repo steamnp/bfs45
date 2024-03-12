@@ -20,7 +20,7 @@ function CountryDetail() {
                     const data = await res.json();
                     setCountry(data);
                 }
-                const data = res.json();
+                const data = await res.json();
                 setCountry(data);
 
             } catch (error) {
