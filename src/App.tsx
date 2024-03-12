@@ -1,11 +1,12 @@
-import { Counter } from "./feature/counter/Counter";
+import { Route, Routes } from "react-router-dom";
+import Home from "./components/Home";
+import Detail from "./components/Detail";
 
-function App() {
+export default function App() {
   return (
-    <div>
-      <Counter />
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />}></Route>
+      <Route path="/pokemon/:name" element={<Detail />}></Route>
+    </Routes>
   );
 }
-
-export default App;
