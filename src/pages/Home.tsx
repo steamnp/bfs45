@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useGetAllPokemonQuery } from "../services/Pokemon";
-import { PokemonResult } from "../utils";
+import { PokemonResult } from "../interfaces/utils";
 
 function Home() {
   const { data, isLoading, isError } = useGetAllPokemonQuery();

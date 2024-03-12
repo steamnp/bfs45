@@ -13,14 +13,18 @@ function Detail() {
 
   if (!pokemonData) return <div>Pokemon not found</div>;
 
-  const { base_experience, height, weight } = pokemonData;
+  const { height, weight } = pokemonData;
 
   return (
     <div>
       <div>Name: {name} </div>
-      <div>Base Experience: {base_experience} </div>
       <div>Height: {height} </div>
       <div>Weight: {weight} </div>
+      <img
+        src={pokemonData.sprites.front_shiny}
+        style={{ width: "300px" }}
+        alt={name}
+      />
     </div>
   );
 }
