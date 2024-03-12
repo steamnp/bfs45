@@ -23,7 +23,7 @@ function Detail() {
         <div>Weight: {weight} </div>
         <img
           src={pokemonData.sprites.front_shiny}
-          style={{ width: "300px" }}
+          style={{ width: "200px" }}
           alt={name}
         />
       </div>
