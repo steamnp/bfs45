@@ -1,0 +1,38 @@
+/* Details.module.css */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.box {
+  background-color: #f9f9f9;
+  border: 2px black solid;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 20px;
+  width: 300px;
+}
+.name {
+  display: block;
+  font-size: 30px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
+  text-decoration: none;
+  color: black;
+  width: 100%;
+  text-transform: capitalize;
+}
+
+.image {
+  border-radius: 8px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.content {
+  font-size: 18px;
+  font-family: "Courier New", Courier, monospace;
+  margin: 5px 0;
+}

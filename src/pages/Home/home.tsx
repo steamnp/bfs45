@@ -3,6 +3,7 @@ import { useGetPokemonListQuery } from "../../service/pokemon/pokemon";
 import { Link } from "react-router-dom";
 import { Pokemon } from "../../types";
 
+import style from "./home.module.css";
 function Home() {
   // Change the hook to useGetPokemonListQuery
   // Getting the first 20 pokemon of the https://pokeapi.co/api/v2/pokemon/
@@ -13,7 +14,6 @@ function Home() {
 
   return (
     <div>
-      <h1>Pokemon List</h1>
       {error ? (
         <div>
           <>Oh no, there was an error</>
@@ -21,13 +21,13 @@ function Home() {
       ) : isLoading ? (
         <div>Loading...</div>
       ) : pokemonList ? (
-        <ul>
+        <div className={style.container}>
           {pokemonList.results.map((pokemon: Pokemon) => (
-            <li key={pokemon.name}>
+            <div className={`${style.box} ${style.name}`}>
               <Link to={`/details/${pokemon.name}`}>{pokemon.name}</Link>
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       ) : null}
     </div>
   );

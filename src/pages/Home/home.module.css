@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.box {
+  flex: calc(25% - 10px);
+  text-align: center;
+  border: 2px black solid;
+  background-color: #0a94be;
+  border-radius: 10px;
+  margin: 3px 3px;
+}
+
+.box:hover {
+  background-color: #83ca7d;
+  text-decoration: none;
+}
+
+.name a {
+  display: block;
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  width: 100%;
+  text-transform: capitalize;
+}
