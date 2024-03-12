@@ -1,7 +1,11 @@
+import { Counter } from "./Features/Counter"
+
 function App() {
 
   return (
-    <div>Hello</div>
+    <div>
+      <Counter />
+    </div>
   )
 }
 
