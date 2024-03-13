@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import HomePage from "./pages/Homepage";
+import HomePage from "./pages/homepage";
 import "./App.css";
 
 function App() {

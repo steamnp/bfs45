@@ -50,18 +50,18 @@ const NewContact: React.FC<NewContactProps> = ({ id }) => {
   const onSubmit = (data: ContactFormData) => {
     const { name, email, telephone } = data;
 
-    if (id) {
-      editContact(name, email, telephone);
-      return;
-    }
-    dispatch(addContact({ name, email, telephone, id: uuidv4() }));
-    navigate("/");
-  };
+  //   if (id) {
+  //     editContact(name, email, telephone);
+  //     return;
+  //   }
+  //   dispatch(addContact({ name, email, telephone, id: uuidv4() }));
+  //   navigate("/");
+  // };
 
-  const editContact = (name: string, email: string, telephone: string) => {
-    dispatch(updateContact({ name, email, telephone, id }));
-    navigate("/");
-  };
+  // const editContact = (name: string, email: string, telephone: string) => {
+  //   dispatch(updateContact({ name, email, telephone, id }));
+  //   navigate("/");
+  // };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
