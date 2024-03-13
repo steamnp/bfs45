@@ -1,4 +1,4 @@
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../app/hooks";
 import { addContact, updateContact } from "../app/contact-slice";
 import { v4 as uuidv4 } from "uuid";
@@ -13,6 +13,7 @@ type ContactFormData = {
   email: string;
   telephone: string;
 };
+
 const schema = yup
   .object({
     name: yup.string().required(),
@@ -24,6 +25,7 @@ const schema = yup
 interface NewContactProps {
   id: string;
 }
+
 const NewContact: React.FC<NewContactProps> = ({ id }) => {
   const {
     register,
@@ -33,8 +35,8 @@ const NewContact: React.FC<NewContactProps> = ({ id }) => {
   } = useForm<ContactFormData>({
     resolver: yupResolver(schema),
   });
-  console.log(id);
-  const history = useHistory();
+
+  const navigate = useNavigate();
   const dispatch = useAppDispatch();
 
   const contactData = useAppSelector((state) =>
@@ -47,22 +49,30 @@ const NewContact: React.FC<NewContactProps> = ({ id }) => {
 
   const onSubmit = (data: ContactFormData) => {
     const { name, email, telephone } = data;
-
+    console.log(name + " " + email + telephone)
     if (id) {
       editContact(name, email, telephone);
       return;
     }
     dispatch(addContact({ name, email, telephone, id: uuidv4() }));
-    history.push("/");
+    navigate("/");
   };
 
   const editContact = (name: string, email: string, telephone: string) => {
     dispatch(updateContact({ name, email, telephone, id }));
-    history.push("/");
+    navigate("/");
   };
+//   if (id) {
+//     dispatch(updateContact({ name, email, telephone, id }));
+//   } else {
+//     dispatch(addContact({ name, email, telephone, id: uuidv4() }));
+//   }
+//   navigate("/contacts");
+// };
+
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <div className="bg-white  p-4 px-4 text-sm ">
+      <div className="bg-white p-4 px-4 text-sm">
         <div className="md:col-span-5">
           <label htmlFor="full_name" className="text-left">
             Full Name
@@ -105,7 +115,6 @@ const NewContact: React.FC<NewContactProps> = ({ id }) => {
             <button
               type="submit"
               className="flex items-center bg-indigo-600 text-white hover:bg-purple-500 p-2 rounded text-sm w-auto"
-              // onClick={onSubmitHandle}
             >
               <BsFillCursorFill />
               <span>&nbsp;Submit</span>

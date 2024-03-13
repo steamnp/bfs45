@@ -1,17 +1,15 @@
 import React from "react";
-import { Switch, Redirect, Route } from "react-router-dom";
-import HomePage from "./Pages/HomePage";
+import { Routes, Route, Navigate } from "react-router-dom";
+import HomePage from "./pages/home-page";
 import "./App.css";
 
 function App() {
   return (
-    <Switch>
-      <Route path="/" exact>
-        <Redirect to="/contacts" />
-      </Route>
-      <Route path="/contacts" exact component={HomePage} />
-      <Route path="*" component={HomePage} />
-    </Switch>
+    <Routes>
+      <Route path="/" element={<Navigate to="/contacts" />} />
+      <Route path="/contacts" element={<HomePage />} />
+      <Route path="*" element={<HomePage />} />
+    </Routes>
   );
 }
 
