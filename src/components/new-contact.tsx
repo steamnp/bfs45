@@ -49,26 +49,26 @@ const NewContact: React.FC<NewContactProps> = ({ id }) => {
 
   const onSubmit = (data: ContactFormData) => {
     const { name, email, telephone } = data;
-
-  //   if (id) {
-  //     editContact(name, email, telephone);
-  //     return;
-  //   }
-  //   dispatch(addContact({ name, email, telephone, id: uuidv4() }));
-  //   navigate("/");
-  // };
-
-  // const editContact = (name: string, email: string, telephone: string) => {
-  //   dispatch(updateContact({ name, email, telephone, id }));
-  //   navigate("/");
-  // };
-  if (id) {
-    dispatch(updateContact({ name, email, telephone, id }));
-  } else {
+    console.log(name + " " + email + telephone)
+    if (id) {
+      editContact(name, email, telephone);
+      return;
+    }
     dispatch(addContact({ name, email, telephone, id: uuidv4() }));
-  }
-  navigate("/contacts");
-};
+    navigate("/");
+  };
+
+  const editContact = (name: string, email: string, telephone: string) => {
+    dispatch(updateContact({ name, email, telephone, id }));
+    navigate("/");
+  };
+//   if (id) {
+//     dispatch(updateContact({ name, email, telephone, id }));
+//   } else {
+//     dispatch(addContact({ name, email, telephone, id: uuidv4() }));
+//   }
+//   navigate("/contacts");
+// };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
