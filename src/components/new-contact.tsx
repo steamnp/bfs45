@@ -46,6 +46,7 @@ const NewContact: React.FC<NewContactProps> = ({ id }) => {
   setValue("telephone", contactData?.telephone || "");
 
   const onSubmit = (data: ContactFormData) => {
+    console.log(data);
     const { name, email, telephone } = data;
 
     if (id) {
