@@ -1,10 +1,14 @@
+import { Navigate, Route, Routes } from "react-router-dom";
+import HomePage from "./Pages/HomePage";
 import "./App.css";
 
 function App() {
   return (
-    <>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-    </>
+    <Routes>
+      <Route path="/" element={<Navigate to="/contacts" />} />
+      <Route path="/contacts" element={<HomePage />} />
+      <Route path="*" element={<HomePage />} />
+    </Routes>
   );
 }
 

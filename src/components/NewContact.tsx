@@ -1,4 +1,4 @@
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../app/hooks";
 import { addContact, updateContact } from "../app/contactSlice";
 import { v4 as uuidv4 } from "uuid";
@@ -34,7 +34,7 @@ const NewContact: React.FC<NewContactProps> = ({ id }) => {
     resolver: yupResolver(schema),
   });
   console.log(id);
-  const history = useHistory();
+  const navigate = useNavigate();
   const dispatch = useAppDispatch();
 
   const contactData = useAppSelector((state) =>
@@ -53,12 +53,12 @@ const NewContact: React.FC<NewContactProps> = ({ id }) => {
       return;
     }
     dispatch(addContact({ name, email, telephone, id: uuidv4() }));
-    history.push("/");
+    navigate("/");
   };
 
   const editContact = (name: string, email: string, telephone: string) => {
     dispatch(updateContact({ name, email, telephone, id }));
-    history.push("/");
+    navigate("/");
   };
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
