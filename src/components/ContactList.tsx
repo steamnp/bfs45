@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ContactInfo from "../components/contactInfo";
+import ContactInfo from "../components/ContactInfo";
 import Contact from "../model/Contact";
 import NewContact from "./NewContact";
 import DialogBox from "./DialogBox";
