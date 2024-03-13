@@ -9,9 +9,9 @@ import {
   BsTelephoneFill,
   BsFilePerson,
 } from "react-icons/bs";
-import Contact from "../model/Contact";
+import Contact from "../model/contact";
 import { useAppDispatch } from "../app/hooks";
-import { removeContact } from "../app/contactSlice";
+import { removeContact } from "../app/contact-slice";
 
 interface ContactProps {
   contact: Contact;
