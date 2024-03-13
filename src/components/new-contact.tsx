@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../app/hooks";
-import { addContact, updateContact } from "../app/contactSlice";
+import { addContact, updateContact } from "../app/contact-slice";
 import { v4 as uuidv4 } from "uuid";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";

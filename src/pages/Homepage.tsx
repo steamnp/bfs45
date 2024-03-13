@@ -3,11 +3,11 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { BsBuilding } from "react-icons/bs";
 import { useAppSelector } from "../app/hooks";
-import Contact from "../model/Contact";
+import Contact from "../model/contact";
 
-import ContactList from "../components/ContactList";
-import NewContact from "../components/NewContact";
-import DialogBox from "../components/DialogBox";
+import ContactList from "../components/contact-list";
+import NewContact from "../components/new-contact";
+import DialogBox from "../components/dialog-box";
 import { BsPlusCircleFill } from "react-icons/bs";
 
 const HomePage: React.FC = (props) => {
