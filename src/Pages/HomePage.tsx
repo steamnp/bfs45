@@ -5,7 +5,7 @@ import { BsBuilding } from "react-icons/bs";
 import { useAppSelector } from "../app/hooks";
 import Contact from "../model/Contact";
 
-import ContactList from "../components/contactList";
+import ContactList from "../components/ContactList";
 import NewContact from "../components/NewContact";
 import DialogBox from "../components/DialogBox";
 import { BsPlusCircleFill } from "react-icons/bs";
