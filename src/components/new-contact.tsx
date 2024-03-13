@@ -62,6 +62,13 @@ const NewContact: React.FC<NewContactProps> = ({ id }) => {
   //   dispatch(updateContact({ name, email, telephone, id }));
   //   navigate("/");
   // };
+  if (id) {
+    dispatch(updateContact({ name, email, telephone, id }));
+  } else {
+    dispatch(addContact({ name, email, telephone, id: uuidv4() }));
+  }
+  navigate("/contacts");
+};
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
