@@ -10,7 +10,7 @@ import {
   BsFilePerson,
 } from "react-icons/bs";
 import Contact from "../model/contact";
-import { useAppDispatch } from "../app/hooks";
+import { useAppDispatch } from "../app/hook";
 import { removeContact } from "../app/contact-slice";
 
 interface ContactProps {
