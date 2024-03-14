@@ -1,5 +1,5 @@
 import { useState, ChangeEvent, FormEvent } from "react";
-import { generateId, getNewExpirationTime } from "./utils/utils";
+import { generateId, getNewExpirationTime } from "../utils/utlis";
 import { AddThoughtFormProps, Thought } from "../types";
 
 export function AddThoughtForm(props: AddThoughtFormProps) {

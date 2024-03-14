@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { ThoughtProps } from "../types/index";
 
-export function Thought(props: ThoughtProps) {
+export function Thoughts(props: ThoughtProps) {
   const { thought, removeThought } = props;
 
   const handleRemoveClick = () => {
