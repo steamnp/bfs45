@@ -1,25 +1,20 @@
-// App.tsx
-import React, { useState } from 'react';
-import { Provider } from 'react-redux';
-import { store } from './store';
-import PokemonList from './pokemonList';
-import PokemonDetail from './pokemonDetail';
+// src/App.tsx
+import { useDispatch, useSelector } from 'react-redux';
+import { increment, decrement, incrementByFive } from './features/counterSlice';
+import { RootState } from './app/store';
 
-const App: React.FC = () => {
-  const [selectedPokemon, setSelectedPokemon] = useState<number | null>(null);
-
-  const handlePokemonClick = (pokemonId: number) => {
-    setSelectedPokemon(pokemonId);
-  };
+function App() {
+  const dispatch = useDispatch();
+  const count = useSelector((state: RootState) => state.counter.value);
 
   return (
-    <Provider store={store}>
-      <div>
-        <PokemonList onPokemonClick={handlePokemonClick} />
-        {selectedPokemon && <PokemonDetail pokemonId={selectedPokemon} />}
-      </div>
-    </Provider>
+    <div>
+      <h1>Counter: {count}</h1>
+      <button onClick={() => dispatch(increment())}>Increment</button>
+      <button onClick={() => dispatch(decrement())}>Decrement</button>
+      <button onClick={() => dispatch(incrementByFive(5))}>Increment by 5</button>
+    </div>
   );
-};
+}
 
 export default App;

@@ -1,5 +1,5 @@
 {
-  "name": "pokemon",
+  "name": "redux",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,9 +11,8 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.1",
-    "react": "^18.3.0-next-fecc288b7-20221025",
-    "react-dom": "^18.3.0-next-fecc288b7-20221025",
-    "react-query": "^3.39.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-redux": "^9.1.0"
   },
   "devDependencies": {

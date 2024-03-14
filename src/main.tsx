@@ -1,15 +1,14 @@
-// main.tsx
-import React from 'react';
+// src/index.tsx
+
 import ReactDOM from 'react-dom';
+import './index.css';
 import App from './App';
+import { store } from './app/store';
+import { Provider } from 'react-redux';
 
-const rootElement = document.getElementById('root');
-
-// @ts-ignore
-const root = ReactDOM.createRoot(rootElement);
-
-root.render(
-  <React.StrictMode>
+ReactDOM.render(
+  <Provider store={store}>
     <App />
-  </React.StrictMode>
+  </Provider>,
+  document.getElementById('root')
 );
