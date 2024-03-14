@@ -2,7 +2,7 @@ import { useState } from "react";
 import ContactInfo from "../components/contact-info";
 import Contact from "../model/contact";
 import NewContact from "./new-contact";
-import DialogBox from "./dialogue-box";
+import DialogBox from "./dialog-box";
 
 interface ContactProps {
   contacts: Contact[] | undefined;

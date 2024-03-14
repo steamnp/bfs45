@@ -7,7 +7,7 @@ import Contact from "../model/contact";
 
 import ContactList from "../components/contact-list";
 import NewContact from "../components/new-contact";
-import DialogBox from "../components/dialogue-box";
+import DialogBox from "../components/dialog-box";
 import { BsPlusCircleFill } from "react-icons/bs";
 
 const HomePage: React.FC = (props) => {
