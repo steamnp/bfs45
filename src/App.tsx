@@ -1,15 +1,56 @@
-import { Routes, Route, Navigate } from "react-router-dom";
-import HomePage from "./pages/HomePage";
-import "./App.css";
+import { useState } from "react";
+import { AddThoughtForm } from "./AddThoughtForm";
+import { Thought } from "./Thought";
+import { generateId, getNewExpirationTime } from "./utils/utils";
 
-function App() {
+const App = () => {
+  const [thoughts, setThoughts] = useState([
+    {
+      id: generateId(),
+      text: "This is a place for your passing thoughts.",
+      expiresAt: getNewExpirationTime(),
+    },
+    {
+      id: generateId(),
+      text: "They'll be removed after 15 seconds.",
+      expiresAt: getNewExpirationTime(),
+    },
+  ]);
+
+  const addThought = (thought: {
+    id: number;
+    text: string;
+    expiresAt: number;
+  }) => {
+    setThoughts((thoughts) => [thought, ...thoughts]);
+  };
+
+  const removeThought = (thoughtIdToRemove: number) => {
+    setThoughts((thoughts) =>
+      thoughts.filter((thought) => thought.id !== thoughtIdToRemove)
+    );
+  };
+
   return (
-    <Routes>
-      <Route path="/" element={<Navigate to="/contacts" />} />
-      <Route path="/contacts" element={<HomePage />} />
-      <Route path="*" element={<HomePage />} />
-    </Routes>
+    <div className="App">
+      <header>
+        <h1>Passing Thoughts</h1>
+      </header>
+
+      <main>
+        <AddThoughtForm addThought={addThought} />
+        <ul className="thoughts">
+          {thoughts.map((thought) => (
+            <Thought
+              removeThought={removeThought}
+              key={thought.id}
+              thought={thought}
+            />
+          ))}
+        </ul>
+      </main>
+    </div>
   );
-}
+};
 
 export default App;
