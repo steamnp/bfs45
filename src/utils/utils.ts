@@ -9,3 +9,17 @@ export function generateId() {
   nextId += 1;
   return result;
 }
+
+export interface thought {
+  id: number;
+  text: string;
+  expiresAt: number;
+}
+
+interface Target {
+  value: string;
+}
+
+export interface ITarget {
+  target: Target;
+}
