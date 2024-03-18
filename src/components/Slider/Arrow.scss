@@ -1,0 +1,62 @@
+.arrow {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin: 0px 10px;
+
+
+  &__img {
+    width: 50px;
+    height: auto;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.4);
+    }
+  }
+
+
+
+
+  @media only screen and (min-width: 280px) and (max-width: 480px) {
+    padding: 0;
+    margin: 0px 5px;
+
+    &__img {
+      width: 30px;
+      height: auto;
+      &:hover {
+        transform: scale(1);
+      }
+    }
+  }
+
+  @media only screen and (min-width: 481px) and (max-width: 767px) {
+    padding: 0;
+    margin: 0px 5px;
+
+    &__img {
+      width: 30px;
+      height: auto;
+
+
+    }
+  }
+
+  @media only screen and (min-width: 1025px) and (max-width: 1400px) {
+    &__img {
+      width: 30px;
+      height: auto;
+    }
+  }
+
+  @media only screen and (min-width: 1400px) and (max-width: 1700px) {
+    &__img {
+      width: 30px;
+      height: auto;
+    }
+  }
+}

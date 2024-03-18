@@ -1,0 +1,346 @@
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap");
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  text-shadow: 1px 1px 2px rgb(0, 0, 0, 0.9);
+  width: 100%;
+  &.scrolled {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  &__item {
+    margin-left: 5px;
+  }
+
+  &__logo-container {
+    display: flex;
+    justify-content: center;
+    margin-left: 150px;
+
+  }
+
+  &__logo {
+    width: 40px;
+    height: 40px;
+    margin: 10px 0;
+
+    &--watch {
+      width: 30px;
+      height: 30px;
+      transition: width 0.3s ease;
+
+      &:hover {
+        width: 35px;
+        height: auto;
+      }
+    }
+  }
+
+  &__title {
+    font-family: "Aboreto", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 5px;
+    color: white;
+
+
+
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    padding: 0px 20px 0px 20px;
+    font-size: 20px;
+    text-decoration: none;
+    font-family: "Kanit", sans-serif;
+    color: white;
+    font-weight: bold;
+
+    &--logo {
+      padding: 0px;
+
+    }
+
+    &--watchlist {
+      padding: 0;
+      font-size: 20px;
+    }
+
+    &:visited {
+      color: white;
+    }
+
+
+
+    &.underline {
+      padding: 10px 0px;
+      border-bottom: 1px solid #d85b53;
+
+    }
+  }
+
+  &__watchlist-container {
+    padding: 0;
+    margin-right: 150px;
+
+  }
+
+  &__total {
+    padding: 0;
+    margin: 0px 5px 0px 0px;
+    font-weight: bold;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  @media only screen and (min-width: 713px) and (max-width: 1060px) {
+
+
+    &__logo-container {
+      margin-left: 75px;
+    }
+
+    &__logo {
+      width: 30px;
+      height: auto;
+
+   
+    }
+
+
+    &__title {
+      font-family: "Aboreto", sans-serif;
+      font-size: 15px;
+      font-weight: bold;
+      margin-left: 5px;
+
+
+
+    }
+
+    &__menu {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+
+    }
+
+    &__link {
+      display: flex;
+      align-items: center;
+      padding: 0px 10px;
+      font-size: 15px;
+      text-decoration: none;
+      font-family: "Kanit", sans-serif;
+
+      &--logo {
+        padding: 0px 0px;
+      }
+
+      &.underline {
+        padding: 5px 0px;
+        border-bottom: 1px solid #d85b53;
+
+      }
+    }
+
+    &__watchlist-container {
+      margin-right: 75px;
+
+    }
+
+    &__total {
+      margin-right: 5px;
+      font-weight: bold;
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  @media screen and (min-width: 500px) and (max-width: 712px) {
+
+    &__logo-container {
+      margin-left: 50px;
+    }
+
+    &__title {
+      display: none;
+
+
+
+    }
+
+    &__logo {
+      width: 30px;
+      height: auto;
+
+      &--watch {
+        width: 20px;
+        height: auto;
+      }
+    }
+
+    &__menu {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+
+    }
+
+    &__link {
+      display: flex;
+      align-items: center;
+      padding: 0px 10px;
+      font-size: 13px;
+      text-decoration: none;
+      font-family: "Kanit", sans-serif;
+
+      &--logo {
+        padding: 0px 0px;
+      }
+
+    }
+
+    &__watchlist-container {
+      margin-right: 50px;
+
+    }
+
+    &__total {
+      margin-right: 5px;
+      font-weight: bold;
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+
+
+
+  @media only screen and (min-width: 280px) and (max-width: 499px) {
+
+
+
+    &__logo-container {
+      margin-left: 20px;
+    }
+
+    &__logo {
+      width: 20px;
+      height: auto;
+      margin: 0;
+
+      &--watch {
+        width: 15px;
+        height: auto;
+
+        &:hover {
+          width: 20px;
+          height: auto;
+        }
+      }
+    }
+
+
+    &__title {
+      display: none;
+
+
+
+    }
+
+    &__menu {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+      padding: 0px 5px;
+      margin: 0;
+
+    }
+
+    &__link {
+      display: flex;
+      align-items: center;
+      padding: 0px 10px;
+      font-size: 10px;
+      text-decoration: none;
+      font-family: "Kanit", sans-serif;
+
+      &--logo {
+        padding: 0px 0px;
+      }
+
+      &--watchlist {
+        padding: 0px 0px;
+      }
+      &.underline {
+        padding: 5px 0px;
+        border-bottom: 1px solid #d85b53;
+
+      }
+    }
+
+    &__watchlist-container {
+      margin-right: 20px;
+
+    }
+
+    &__total {
+      margin: 0px 5px 0px 0px;
+      font-weight: bold;
+    }
+
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
